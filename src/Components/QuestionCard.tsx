@@ -1,17 +1,8 @@
 import React from 'react';
-import {AnswerObject} from '../App';
+import {Questions} from '../Shared/Types';
 import { Wrapper, ButtonWrapper  } from './QuestionCard.style';
 
-type Props = {
-    question: string;
-    answers: string[];
-    callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    userAnswer: AnswerObject | undefined;
-    questionNr: number;
-    totalQuestions: number;
-}
-
-function QuestionCard({ question, answers, callback, userAnswer, questionNr, totalQuestions }: Props) {
+function QuestionCard({ question, answers, callback, userAnswer, questionNr, totalQuestions }: Questions) {
     return (
         <Wrapper>
             <p className="number">Question: {questionNr} / {totalQuestions}</p>
